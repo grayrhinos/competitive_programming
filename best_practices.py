@@ -17,13 +17,21 @@ but a for loop with in-line code beats map with a lambda function!
 Python recognizes that input() is a build in function and looks up for that does input() do. After lookup is when it starts executing it. By using alias 
 (assigning a new name to input()) we can save that lookup time. 
 '''
-xyz = input
-t = int(xyz()) 
-for i1 in [0]*t:
-    n = int(xyz())
-    num = list(map(int, xyz().split()))
+import sys
+
+def main():
+    input = sys.stdin.readline
+    print = sys.stdout.write
+    t = int(input())
+    for i1 in [0]*t:
+        n, x = map(int, input().split())
+        nums = list(map(int, input().split()))
+        
+     print(answer + '\n')
     
-    for i in range(len(num)):
+if __name__=="__main__":
+    main()
+
 
 
         
