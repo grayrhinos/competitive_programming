@@ -36,10 +36,11 @@ if __name__=="__main__":
 
         
         
-        
+#----------------------------------------------------------------------------------------------------------------------------------------------        
         
 # Code for testing runtime
 import timeit
+# timeit takes other parameters such measuring time for import, or using global variables
 
 print(timeit.timeit(
 '''
@@ -49,3 +50,21 @@ for i in [0]*100000:
     j += 1
 '''    
 , number = 1000))
+
+
+#----------------------------------------------------------------------------------------------------------------------------------------------
+# Template for using Binary Search
+def binary_search(array) -> int:
+    def condition(value) -> bool:
+        pass
+
+    left, right = min(search_space), max(search_space) # could be [0, n], [1, n] etc. Depends on problem
+    while left < right:
+        mid = left + (right - left) // 2
+        if condition(mid):
+            right = mid
+        else:
+            left = mid + 1
+    return left
+
+# Reference: https://leetcode.com/discuss/general-discussion/786126/python-powerful-ultimate-binary-search-template-solved-many-problems
