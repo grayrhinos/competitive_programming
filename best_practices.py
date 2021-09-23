@@ -27,7 +27,7 @@ def main():
         n, x = map(int, input().split())
         nums = list(map(int, input().split()))
         
-     print(answer + '\n')
+    print(answer + '\n')
     
 if __name__=="__main__":
     main()
